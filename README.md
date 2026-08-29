@@ -29,9 +29,10 @@ classification to speed up and standardize that process.
 - Module 4: Cross-verification and risk scoring
 
 ## Setup
+
 \`\`\`bash
 python -m venv venv
-venv\\Scripts\\activate
+venv\Scripts\activate
 pip install -r requirements.txt
 docker compose up -d
 uvicorn app.main:app --reload
