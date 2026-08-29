@@ -19,7 +19,7 @@ DOCUMENT_SIGNATURES = {
         "keywords": ["employees provident fund", "epfo", "establishment code"],
         "display_name": "EPFO Registration Certificate",
     },
-        "esic_certificate": {
+    "esic_certificate": {
         "keywords": [
             "employees state insurance", "esic", "esi corporation",
             "insurance number", "employer code", "sub code",
