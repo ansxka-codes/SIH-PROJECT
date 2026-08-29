@@ -30,11 +30,11 @@ classification to speed up and standardize that process.
 
 ## Setup
 
-\`\`\`bash
+```bash
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 docker compose up -d
 uvicorn app.main:app --reload
 celery -A app.tasks worker --loglevel=info --pool=solo
-\`\`\`
+```
