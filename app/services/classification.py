@@ -19,71 +19,101 @@ DOCUMENT_SIGNATURES = {
         "keywords": ["employees provident fund", "epfo", "establishment code"],
         "display_name": "EPFO Registration Certificate",
     },
-     "esic_certificate": [
-        "employees state insurance", "esic", "esi corporation",
-        "insurance number", "employer code", "sub code",
-        "esic registration", "e.s.i. act", "insurable employment"
-    ],
+        "esic_certificate": {
+        "keywords": [
+            "employees state insurance", "esic", "esi corporation",
+            "insurance number", "employer code", "sub code",
+            "esic registration", "e.s.i. act", "insurable employment"
+        ],
+        "display_name": "ESIC Registration Certificate",
+    },
 
-    "startup_india_certificate": [
-        "startup india", "dpiit", "department for promotion of industry",
-        "certificate of recognition", "startup recognition number",
-        "recognition certificate", "startup india scheme",
-        "innovative", "scalable business model"
-    ],
+    "startup_india_certificate": {
+        "keywords": [
+            "startup india", "dpiit", "department for promotion of industry",
+            "certificate of recognition", "startup recognition number",
+            "recognition certificate", "startup india scheme",
+            "innovative", "scalable business model"
+        ],
+        "display_name": "Startup India Certificate",
+    },
 
-    "nsic_certificate": [
-        "national small industries corporation", "nsic",
-        "single point registration", "spr certificate",
-        "nsic registration", "monetary limit",
-        "tender marketing", "public procurement policy"
-    ],
+    "nsic_certificate": {
+        "keywords": [
+            "national small industries corporation", "nsic",
+            "single point registration", "spr certificate",
+            "nsic registration", "monetary limit",
+            "tender marketing", "public procurement policy"
+        ],
+        "display_name": "NSIC Registration Certificate",
+    },
 
-    "oem_authorization": [
-        "original equipment manufacturer", "oem", "authorization letter",
-        "authorized dealer", "authorized distributor", "manufacturer authorization",
-        "authorized to sell", "authorized to bid", "on behalf of the manufacturer",
-        "letter of authorization"
-    ],
+    "oem_authorization": {
+        "keywords": [
+            "original equipment manufacturer", "oem", "authorization letter",
+            "authorized dealer", "authorized distributor", "manufacturer authorization",
+            "authorized to sell", "authorized to bid", "on behalf of the manufacturer",
+            "letter of authorization"
+        ],
+        "display_name": "OEM Authorization Letter",
+    },
 
-    "digilocker_document": [
-        "digilocker", "digital locker", "issued via digilocker",
-        "digitally signed", "e-sign", "meripehchaan",
-        "digilocker verified", "government of india digilocker"
-    ],
+    "digilocker_document": {
+        "keywords": [
+            "digilocker", "digital locker", "issued via digilocker",
+            "digitally signed", "e-sign", "meripehchaan",
+            "digilocker verified", "government of india digilocker"
+        ],
+        "display_name": "DigiLocker Verified Document",
+    },
 
-    "board_resolution_poa": [
-        "board resolution", "power of attorney", "poa",
-        "authorized signatory", "resolved that", "board of directors",
-        "hereby authorize", "in pursuance of section", "notarized",
-        "certified true copy of resolution"
-    ],
+    "board_resolution_poa": {
+        "keywords": [
+            "board resolution", "power of attorney", "poa",
+            "authorized signatory", "resolved that", "board of directors",
+            "hereby authorize", "in pursuance of section", "notarized",
+            "certified true copy of resolution"
+        ],
+        "display_name": "Board Resolution / Power of Attorney",
+    },
 
-    "self_declaration": [
-        "self declaration", "undertaking", "hereby declare",
-        "i/we declare", "solemnly affirm", "declaration form",
-        "on affidavit", "non-blacklisting declaration", "no litigation certificate"
-    ],
+    "self_declaration": {
+        "keywords": [
+            "self declaration", "undertaking", "hereby declare",
+            "i/we declare", "solemnly affirm", "declaration form",
+            "on affidavit", "non-blacklisting declaration", "no litigation certificate"
+        ],
+        "display_name": "Self Declaration / Undertaking",
+    },
 
-    "financial_statement": [
-        "balance sheet", "profit and loss", "audited financial statement",
-        "annual turnover", "chartered accountant", "auditor's report",
-        "net worth certificate", "ca certificate", "financial year ended",
-        "statement of accounts"
-    ],
+    "financial_statement": {
+        "keywords": [
+            "balance sheet", "profit and loss", "audited financial statement",
+            "annual turnover", "chartered accountant", "auditor's report",
+            "net worth certificate", "ca certificate", "financial year ended",
+            "statement of accounts"
+        ],
+        "display_name": "Financial Statement",
+    },
 
-    "blacklisting_debarment": [
-        "blacklisting", "debarment", "not blacklisted", "not debarred",
-        "banned list", "holiday listed", "suspension of business dealings",
-        "no adverse action", "certificate of non-blacklisting"
-    ],
+    "blacklisting_debarment": {
+        "keywords": [
+            "blacklisting", "debarment", "not blacklisted", "not debarred",
+            "banned list", "holiday listed", "suspension of business dealings",
+            "no adverse action", "certificate of non-blacklisting"
+        ],
+        "display_name": "Non-Blacklisting / Debarment Certificate",
+    },
 
-    "make_in_india_local_content": [
-        "make in india", "local content", "class-i local supplier",
-        "class-ii local supplier", "domestic value addition",
-        "purchase preference", "local content percentage",
-        "self-certification of local content"
-    ],
+    "make_in_india_local_content": {
+        "keywords": [
+            "make in india", "local content", "class-i local supplier",
+            "class-ii local supplier", "domestic value addition",
+            "purchase preference", "local content percentage",
+            "self-certification of local content"
+        ],
+        "display_name": "Make in India / Local Content Certificate",
+    },
 }
 
 def classify_document(text: str) -> tuple[str, str]:
