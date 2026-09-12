@@ -3,8 +3,10 @@ from fastapi import UploadFile
 from pathlib import Path
 import uuid
 from app.database import SessionLocal, Evaluation
+from app.entity_extraction.main import app as entity_extraction_router
 
 app = FastAPI()
+app.include_router(entity_extraction_router)
 
 @app.get("/health")
 def health_check():

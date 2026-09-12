@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from sqlalchemy import Column, String, DateTime, Integer
+from sqlalchemy import Column, String, DateTime, Integer , Boolean , JSON
 
 DATABASE_URL = "postgresql://gem_user:gem_pass@localhost:5432/gem_verification"
 
@@ -19,6 +19,7 @@ class Evaluation(Base):
     original_zip_name = Column(String)
     status = Column(String, default="uploaded")
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    entities_payload = Column(JSON, nullable=True)
 
 class BidderFolder(Base):
     __tablename__ = "bidder_folders"
@@ -40,3 +41,6 @@ class Document(Base):
     classification_status = Column(String, default="pending")
     classified_type = Column(String)
     display_name = Column(String)
+    pdf_producer = Column(String, nullable=True)
+    has_digital_signature = Column(Boolean, default=False)
+    font_anomaly_detected = Column(Boolean, default=False)

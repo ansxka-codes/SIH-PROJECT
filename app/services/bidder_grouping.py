@@ -1,6 +1,6 @@
 from pathlib import Path
 from app.database import SessionLocal, BidderFolder, Document
-from app.services.text_extraction import extract_text_from_pdf, ocr_pdf, ocr_image_file
+from app.services.text_extraction import extract_text_from_pdf, ocr_pdf, ocr_image_file , extract_forensic_metadata
 from app.services.classification import classify_document
 import uuid
 import shutil
@@ -87,6 +87,11 @@ def extract_all_documents(evaluation_id: str, db) -> int:
                 if text:
                     doc.extracted_text = text
                     doc.classification_status = "text_extracted"
+
+                    forensic = extract_forensic_metadata(doc.stored_path)
+                    doc.pdf_producer = forensic["producer"]
+                    doc.has_digital_signature = forensic["has_digital_signature"]
+                    doc.font_anomaly_detected = forensic["font_anomaly_detected"]
                 else:
                     doc.extracted_text = ocr_pdf(doc.stored_path)
                     doc.classification_status = "ocr_extracted"
